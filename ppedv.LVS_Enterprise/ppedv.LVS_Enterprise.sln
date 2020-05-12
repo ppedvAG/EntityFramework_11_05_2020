@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.29911.84
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.LVS_Enterprise.Model", "ppedv.LVS_Enterprise.Model\ppedv.LVS_Enterprise.Model.csproj", "{4ECEDB15-DD42-4FC7-9D26-499F27CBF4FC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.LVS_Enterprise.Data.EF", "ppedv.LVS_Enterprise.Data.EF\ppedv.LVS_Enterprise.Data.EF.csproj", "{CA727894-55A7-4ADF-B4F1-18A0C0450ECC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{4ECEDB15-DD42-4FC7-9D26-499F27CBF4FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4ECEDB15-DD42-4FC7-9D26-499F27CBF4FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4ECEDB15-DD42-4FC7-9D26-499F27CBF4FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA727894-55A7-4ADF-B4F1-18A0C0450ECC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA727894-55A7-4ADF-B4F1-18A0C0450ECC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA727894-55A7-4ADF-B4F1-18A0C0450ECC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA727894-55A7-4ADF-B4F1-18A0C0450ECC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

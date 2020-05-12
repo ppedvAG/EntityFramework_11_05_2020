@@ -9,6 +9,4 @@ namespace ppedv.LVS_Enterprise.Model
         public DateTime Created { get; set; }
         public string LastUser { get; set; }
     }
-
-
 }
