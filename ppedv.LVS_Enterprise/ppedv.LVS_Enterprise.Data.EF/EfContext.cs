@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,7 +19,13 @@ namespace ppedv.LVS_Enterprise.Data.EF
 
         public EfContext(string conString) : base(conString)
         { }
+
         public EfContext() : this("Server=(localdb)\\mssqllocaldb;Database=LVS_Enterprise_dev;Trusted_Connection=true")
         { }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+        }
     }
 }

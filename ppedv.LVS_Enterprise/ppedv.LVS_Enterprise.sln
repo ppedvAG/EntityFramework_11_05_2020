@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.LVS_Enterprise.Model"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.LVS_Enterprise.Data.EF", "ppedv.LVS_Enterprise.Data.EF\ppedv.LVS_Enterprise.Data.EF.csproj", "{CA727894-55A7-4ADF-B4F1-18A0C0450ECC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.LVS_Enterprise.Data.EF.Tests", "ppedv.LVS_Enterprise.Data.EF.Tests\ppedv.LVS_Enterprise.Data.EF.Tests.csproj", "{B6A6E48C-862A-4E3A-8B98-46F52B34C7EA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{CA727894-55A7-4ADF-B4F1-18A0C0450ECC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA727894-55A7-4ADF-B4F1-18A0C0450ECC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA727894-55A7-4ADF-B4F1-18A0C0450ECC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6A6E48C-862A-4E3A-8B98-46F52B34C7EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6A6E48C-862A-4E3A-8B98-46F52B34C7EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6A6E48C-862A-4E3A-8B98-46F52B34C7EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6A6E48C-862A-4E3A-8B98-46F52B34C7EA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
