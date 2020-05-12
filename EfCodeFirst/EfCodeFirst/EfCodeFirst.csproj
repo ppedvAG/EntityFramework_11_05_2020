@@ -63,6 +63,15 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202005120947026_InitialCreate.cs" />
+    <Compile Include="Migrations\202005120947026_InitialCreate.designer.cs">
+      <DependentUpon>202005120947026_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005120949318_v5.cs" />
+    <Compile Include="Migrations\202005120949318_v5.designer.cs">
+      <DependentUpon>202005120949318_v5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Abteilung.cs" />
     <Compile Include="Model\Kunde.cs" />
     <Compile Include="Model\Mitarbeiter.cs" />
@@ -71,6 +80,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005120947026_InitialCreate.resx">
+      <DependentUpon>202005120947026_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005120949318_v5.resx">
+      <DependentUpon>202005120949318_v5.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

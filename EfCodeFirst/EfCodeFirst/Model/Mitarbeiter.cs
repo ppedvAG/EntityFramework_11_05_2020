@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace EfCodeFirst.Model
@@ -10,5 +11,8 @@ namespace EfCodeFirst.Model
         public string Beruf { get; set; }
         public ICollection<Kunde> Kunde { get; set; } = new HashSet<Kunde>();
         public ICollection<Abteilung> Abteilungen { get; set; } = new HashSet<Abteilung>();
+
+        public DateTime MitgliedSeit { get; set; }
+
     }
 }
