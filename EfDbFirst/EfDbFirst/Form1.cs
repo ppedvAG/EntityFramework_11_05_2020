@@ -10,11 +10,28 @@ using System.Windows.Forms;
 
 namespace EfDbFirst
 {
+    public delegate object SuperDelegate(string txt);
     public partial class Form1 : Form
     {
+
+        public event SuperDelegate SuperClick;
+
         public Form1()
         {
             InitializeComponent();
+
+            this.Click += Form1_Click;
+            SuperClick += Form1_SuperClick;
+        }
+
+        private object Form1_SuperClick(string msg)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void Form1_Click(object sender, EventArgs e)
+        {
+          //  SuperClick.Invoke("GeSUPERclicked");
         }
 
         NORTHWNDEntities context = new NORTHWNDEntities();
