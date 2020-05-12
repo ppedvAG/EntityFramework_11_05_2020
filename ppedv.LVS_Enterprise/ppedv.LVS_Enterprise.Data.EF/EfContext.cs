@@ -26,6 +26,15 @@ namespace ppedv.LVS_Enterprise.Data.EF
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+
+
+            //alle DateTime werden datetime2 in der DB
+            //modelBuilder.Properties<DateTime>().Configure(x => x.HasColumnType("datetime2"));
+
+            //nur created und modified werden datetime2 in der DB
+            modelBuilder.Properties<DateTime>().Where(x => x.Name == nameof(Entity.Created)
+                                                        || x.Name == nameof(Entity.Modified))
+                                               .Configure(x => x.HasColumnType("datetime2"));
         }
     }
 }

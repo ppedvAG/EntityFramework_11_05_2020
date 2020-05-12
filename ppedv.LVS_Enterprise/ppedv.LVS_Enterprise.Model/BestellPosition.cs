@@ -2,8 +2,8 @@
 {
     public class BestellPosition : Entity
     {
-        public Bestellung Bestellung { get; set; }
-        public Artikel Artikel { get; set; }
+        public virtual Bestellung Bestellung { get; set; }
+        public virtual Artikel Artikel { get; set; }
         public int Menge { get; set; }
     }
 }

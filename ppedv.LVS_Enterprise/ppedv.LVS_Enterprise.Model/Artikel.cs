@@ -9,7 +9,7 @@ namespace ppedv.LVS_Enterprise.Model
         public double Gewicht { get; set; }
         public decimal Preis { get; set; }
         public Form Form { get; set; }
-        public ICollection<Lagerung> Lagerung { get; set; } = new HashSet<Lagerung>();
+        public virtual ICollection<Lagerung> Lagerung { get; set; } = new HashSet<Lagerung>();
     }
 
     public enum Form

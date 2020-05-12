@@ -2,8 +2,8 @@
 {
     public class Lagerung : Entity
     {
-        public Lager Lager { get; set; }
-        public Artikel Artikel { get; set; }
+        public virtual Lager Lager { get; set; }
+        public virtual Artikel Artikel { get; set; }
         public int Anzahl { get; set; }
     }
 }

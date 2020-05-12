@@ -7,6 +7,6 @@ namespace ppedv.LVS_Enterprise.Model
     {
         public DateTime Datum { get; set; }
         public string Auftraggeber { get; set; }
-        public ICollection<BestellPosition> BestellPositionen { get; set; } = new HashSet<BestellPosition>();
+        public virtual ICollection<BestellPosition> BestellPositionen { get; set; } = new HashSet<BestellPosition>();
     }
 }
