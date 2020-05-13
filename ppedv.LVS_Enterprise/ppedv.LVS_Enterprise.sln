@@ -9,11 +9,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.LVS_Enterprise.Data.E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.LVS_Enterprise.Data.EF.Tests", "ppedv.LVS_Enterprise.Data.EF.Tests\ppedv.LVS_Enterprise.Data.EF.Tests.csproj", "{B6A6E48C-862A-4E3A-8B98-46F52B34C7EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.LVS_Enterprise.Logic", "ppedv.LVS_Enterprise.Logic\ppedv.LVS_Enterprise.Logic.csproj", "{DC92D34D-1D27-4133-8A0B-19ABD4BEFBEA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ppedv.LVS_Enterprise.Logic", "ppedv.LVS_Enterprise.Logic\ppedv.LVS_Enterprise.Logic.csproj", "{DC92D34D-1D27-4133-8A0B-19ABD4BEFBEA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.LVS_Enterprise.UI.NetConsole", "ppedv.LVS_Enterprise.UI.NetConsole\ppedv.LVS_Enterprise.UI.NetConsole.csproj", "{B90B7A67-1DA4-4C17-9511-166DC09C7557}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.LVS_Enterprise.Logic.Tests", "ppedv.LVS_Enterprise.Logic.Tests\ppedv.LVS_Enterprise.Logic.Tests.csproj", "{452A9AEE-3146-4CA0-AD1E-4B77C7879504}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ppedv.LVS_Enterprise.Logic.Tests", "ppedv.LVS_Enterprise.Logic.Tests\ppedv.LVS_Enterprise.Logic.Tests.csproj", "{452A9AEE-3146-4CA0-AD1E-4B77C7879504}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{C92FE485-6373-4C7E-B870-B428DB04F199}"
 EndProject
@@ -23,7 +23,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BusinessLogic", "BusinessLo
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{094D4BB6-5A80-4C8E-A164-89B67B6D5DE3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.LVS_Enterprise.UI.WPFCore", "ppedv.LVS_Enterprise.UI.WPFCore\ppedv.LVS_Enterprise.UI.WPFCore.csproj", "{1D679662-CE70-43AD-8A81-0EDA0C554FE8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ppedv.LVS_Enterprise.UI.WPFCore", "ppedv.LVS_Enterprise.UI.WPFCore\ppedv.LVS_Enterprise.UI.WPFCore.csproj", "{1D679662-CE70-43AD-8A81-0EDA0C554FE8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.LVS_Enterprise.Data.EFCore", "ppedv.LVS_Enterprise.Data.EFCore\ppedv.LVS_Enterprise.Data.EFCore.csproj", "{B4672533-B0E2-4F3B-B63F-1DC3A4DE2C14}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.LVS_Enterprise.Data.EFCore.Tests", "ppedv.LVS_Enterprise.Data.EFCore.Tests\ppedv.LVS_Enterprise.Data.EFCore.Tests.csproj", "{450D6107-10E9-423F-B838-2AA822CAD313}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,6 +63,14 @@ Global
 		{1D679662-CE70-43AD-8A81-0EDA0C554FE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D679662-CE70-43AD-8A81-0EDA0C554FE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D679662-CE70-43AD-8A81-0EDA0C554FE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4672533-B0E2-4F3B-B63F-1DC3A4DE2C14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4672533-B0E2-4F3B-B63F-1DC3A4DE2C14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4672533-B0E2-4F3B-B63F-1DC3A4DE2C14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4672533-B0E2-4F3B-B63F-1DC3A4DE2C14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{450D6107-10E9-423F-B838-2AA822CAD313}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{450D6107-10E9-423F-B838-2AA822CAD313}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{450D6107-10E9-423F-B838-2AA822CAD313}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{450D6107-10E9-423F-B838-2AA822CAD313}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -71,6 +83,8 @@ Global
 		{B90B7A67-1DA4-4C17-9511-166DC09C7557} = {F03CFBDE-233A-479F-A69F-601784875BA3}
 		{452A9AEE-3146-4CA0-AD1E-4B77C7879504} = {F98BC94C-97E7-44B5-97B7-0D2F934F9F8B}
 		{1D679662-CE70-43AD-8A81-0EDA0C554FE8} = {F03CFBDE-233A-479F-A69F-601784875BA3}
+		{B4672533-B0E2-4F3B-B63F-1DC3A4DE2C14} = {C92FE485-6373-4C7E-B870-B428DB04F199}
+		{450D6107-10E9-423F-B838-2AA822CAD313} = {C92FE485-6373-4C7E-B870-B428DB04F199}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D5E4E453-2D63-4155-8695-62FFBFDF7C68}

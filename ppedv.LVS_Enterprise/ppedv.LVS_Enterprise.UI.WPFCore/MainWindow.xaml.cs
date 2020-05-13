@@ -1,9 +1,11 @@
 ﻿using ppedv.LVS_Enterprise.Logic;
 using ppedv.LVS_Enterprise.Model;
+using ppedv.LVS_Enterprise.Model.Contracts;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -26,11 +28,20 @@ namespace ppedv.LVS_Enterprise.UI.WPFCore
         public MainWindow()
         {
             InitializeComponent();
+
+
+            //DI per Hand
+            var filePath = @"C:\Users\rulan\source\repos\ppedvAG\EntityFramework_11_05_2020\ppedv.LVS_Enterprise\ppedv.LVS_Enterprise.Data.EFCore\bin\Debug\netcoreapp2.0\ppedv.LVS_Enterprise.Data.EFCore.dll";
+            var ass = Assembly.LoadFrom(filePath);
+            var repo = ass.GetTypes().FirstOrDefault(x => x.Name.Contains("Repository"));
+            var inst = Activator.CreateInstance(repo);
+            core = new LVSCore(inst as IRepository);
         }
 
-        LVSCore core = new LVSCore();
-
-        ObservableCollection<Artikel> artikeListe = null;
+        //LVSCore core = new LVSCore();
+        //LVSCore core = new LVSCore(new Data.EFCore.EfCoreRepository());
+        LVSCore core = null;
+        ObservableCollection <Artikel> artikeListe = null;
 
         private void Laden(object sender, RoutedEventArgs e)
         {

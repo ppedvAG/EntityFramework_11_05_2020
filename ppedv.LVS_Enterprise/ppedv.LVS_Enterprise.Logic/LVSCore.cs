@@ -26,5 +26,6 @@ namespace ppedv.LVS_Enterprise.Logic
 
         public LVSCore() : this(new Data.EF.EfRepository())
         { }
+
     }
 }
