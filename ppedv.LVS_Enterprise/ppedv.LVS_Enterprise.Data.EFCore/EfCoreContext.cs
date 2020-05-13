@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using ppedv.LVS_Enterprise.Model;
 using System;
+using System.Linq;
 
 namespace ppedv.LVS_Enterprise.Data.EFCore
 {
@@ -22,6 +23,35 @@ namespace ppedv.LVS_Enterprise.Data.EFCore
         public EfCoreContext() : this("Server=(localdb)\\mssqllocaldb;Database=LVS_Enterprise_dev_EFCORE;Trusted_Connection=true")
         {
 
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            //   modelBuilder.Entity<Artikel>().Property(x => x.Bezeichnung).HasDefaultValue("lala");
+
+            //modelBuilder.Entity<Artikel>().Property(x => x.Modified).IsConcurrencyToken();
+            modelBuilder.Entity<Artikel>().Property(x => x.Modified).IsConcurrencyToken();
+
+        }
+
+        public override int SaveChanges()
+        {
+            foreach (var item in ChangeTracker.Entries().Where(x => x.State == EntityState.Added))
+            {
+                var dt = DateTime.Now;
+                ((Entity)item.Entity).Created = dt;
+                ((Entity)item.Entity).Modified = dt;
+                ((Entity)item.Entity).LastUser = Environment.UserName;
+            }
+
+            foreach (var item in ChangeTracker.Entries().Where(x => x.State == EntityState.Modified))
+            {
+                var dt = DateTime.Now;
+                ((Entity)item.Entity).Modified = dt;
+                ((Entity)item.Entity).LastUser = Environment.UserName;
+            }
+
+            return base.SaveChanges();
         }
 
     }

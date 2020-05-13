@@ -1,22 +1,10 @@
-﻿using ppedv.LVS_Enterprise.Logic;
+﻿using Microsoft.EntityFrameworkCore;
+using ppedv.LVS_Enterprise.Logic;
 using ppedv.LVS_Enterprise.Model;
-using ppedv.LVS_Enterprise.Model.Contracts;
 using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace ppedv.LVS_Enterprise.UI.WPFCore
 {
@@ -31,27 +19,55 @@ namespace ppedv.LVS_Enterprise.UI.WPFCore
 
 
             //DI per Hand
-            var filePath = @"C:\Users\rulan\source\repos\ppedvAG\EntityFramework_11_05_2020\ppedv.LVS_Enterprise\ppedv.LVS_Enterprise.Data.EFCore\bin\Debug\netcoreapp2.0\ppedv.LVS_Enterprise.Data.EFCore.dll";
-            var ass = Assembly.LoadFrom(filePath);
-            var repo = ass.GetTypes().FirstOrDefault(x => x.Name.Contains("Repository"));
-            var inst = Activator.CreateInstance(repo);
-            core = new LVSCore(inst as IRepository);
+            //  var filePath = @"C:\Users\rulan\source\repos\ppedvAG\EntityFramework_11_05_2020\ppedv.LVS_Enterprise\ppedv.LVS_Enterprise.Data.EFCore\bin\Debug\netcoreapp2.0\ppedv.LVS_Enterprise.Data.EFCore.dll";
+            //  var ass = Assembly.LoadFrom(filePath);
+            //  var repo = ass.GetTypes().FirstOrDefault(x => x.Name.Contains("Repository"));
+            //var repo = ass.GetTypes().FirstOrDefault(x => x.IsAssignableFrom(typeof(IRepository)));
+            //var inst = Activator.CreateInstance(repo);
+            //core = new LVSCore(inst as IRepository);
         }
 
-        //LVSCore core = new LVSCore();
-        //LVSCore core = new LVSCore(new Data.EFCore.EfCoreRepository());
+        
         LVSCore core = null;
-        ObservableCollection <Artikel> artikeListe = null;
+        ObservableCollection<Artikel> artikeListe = null;
 
         private void Laden(object sender, RoutedEventArgs e)
         {
+            core = new LVSCore(new Data.EFCore.EfCoreRepository());
             artikeListe = new ObservableCollection<Artikel>(core.Repository.GetAll<Artikel>());
             myGrid.ItemsSource = artikeListe;
         }
 
         private void Speicher(object sender, RoutedEventArgs e)
         {
-            core.Repository.Save();
+
+            try
+            {
+                core.Repository.Save();
+            }
+            catch (DbUpdateConcurrencyException ex)
+            {
+                var msg = MessageBox.Show("Die Daten wurden zwischenzeitlich geändert!\n Ja: Daten in DB überschreiben \n Nein: Daten aus DB laden", "",
+                                            MessageBoxButton.YesNoCancel, MessageBoxImage.Question);
+                if (msg == MessageBoxResult.Yes)
+                {
+                    //User wins
+                    var entry = ex.Entries.Single();
+                    entry.OriginalValues.SetValues(entry.GetDatabaseValues());
+                    core.Repository.Save();
+                }
+                else if (msg == MessageBoxResult.No)
+                {
+                    //DB wins
+                    ex.Entries.Single().Reload();
+                    Laden(null, null);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Fehler:{ex.Message}");
+            }
+
         }
 
         private void Neu(object sender, RoutedEventArgs e)

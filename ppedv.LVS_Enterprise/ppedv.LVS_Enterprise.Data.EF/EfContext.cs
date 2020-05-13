@@ -27,7 +27,6 @@ namespace ppedv.LVS_Enterprise.Data.EF
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
 
-
             //alle DateTime werden datetime2 in der DB
             //modelBuilder.Properties<DateTime>().Configure(x => x.HasColumnType("datetime2"));
 
