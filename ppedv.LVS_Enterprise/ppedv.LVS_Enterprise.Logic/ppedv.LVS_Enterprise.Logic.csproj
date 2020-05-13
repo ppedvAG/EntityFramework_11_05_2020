@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ppedv.LVS_Enterprise.Data.EF\ppedv.LVS_Enterprise.Data.EF.csproj" />
+    <ProjectReference Include="..\ppedv.LVS_Enterprise.Model\ppedv.LVS_Enterprise.Model.csproj" />
+  </ItemGroup>
+
+</Project>

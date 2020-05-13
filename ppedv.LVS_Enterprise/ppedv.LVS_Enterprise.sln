@@ -3,11 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29911.84
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.LVS_Enterprise.Model", "ppedv.LVS_Enterprise.Model\ppedv.LVS_Enterprise.Model.csproj", "{4ECEDB15-DD42-4FC7-9D26-499F27CBF4FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ppedv.LVS_Enterprise.Model", "ppedv.LVS_Enterprise.Model\ppedv.LVS_Enterprise.Model.csproj", "{4ECEDB15-DD42-4FC7-9D26-499F27CBF4FC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.LVS_Enterprise.Data.EF", "ppedv.LVS_Enterprise.Data.EF\ppedv.LVS_Enterprise.Data.EF.csproj", "{CA727894-55A7-4ADF-B4F1-18A0C0450ECC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.LVS_Enterprise.Data.EF.Tests", "ppedv.LVS_Enterprise.Data.EF.Tests\ppedv.LVS_Enterprise.Data.EF.Tests.csproj", "{B6A6E48C-862A-4E3A-8B98-46F52B34C7EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.LVS_Enterprise.Logic", "ppedv.LVS_Enterprise.Logic\ppedv.LVS_Enterprise.Logic.csproj", "{DC92D34D-1D27-4133-8A0B-19ABD4BEFBEA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.LVS_Enterprise.UI.NetConsole", "ppedv.LVS_Enterprise.UI.NetConsole\ppedv.LVS_Enterprise.UI.NetConsole.csproj", "{B90B7A67-1DA4-4C17-9511-166DC09C7557}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +31,14 @@ Global
 		{B6A6E48C-862A-4E3A-8B98-46F52B34C7EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B6A6E48C-862A-4E3A-8B98-46F52B34C7EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B6A6E48C-862A-4E3A-8B98-46F52B34C7EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC92D34D-1D27-4133-8A0B-19ABD4BEFBEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC92D34D-1D27-4133-8A0B-19ABD4BEFBEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC92D34D-1D27-4133-8A0B-19ABD4BEFBEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC92D34D-1D27-4133-8A0B-19ABD4BEFBEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B90B7A67-1DA4-4C17-9511-166DC09C7557}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B90B7A67-1DA4-4C17-9511-166DC09C7557}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B90B7A67-1DA4-4C17-9511-166DC09C7557}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B90B7A67-1DA4-4C17-9511-166DC09C7557}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
