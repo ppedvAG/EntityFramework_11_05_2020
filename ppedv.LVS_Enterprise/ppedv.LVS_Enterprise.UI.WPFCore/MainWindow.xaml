@@ -9,9 +9,9 @@
     <DockPanel >
         <WrapPanel DockPanel.Dock="Top" Margin="12">
             <Button Click="Laden">Laden</Button>
-            <Button>Speichern</Button>
-            <Button>Neu</Button>
-            <Button>Löschen</Button>
+            <Button Click="Speicher">Speichern</Button>
+            <Button Click="Neu">Neu</Button>
+            <Button Click="Delete">Löschen</Button>
         </WrapPanel>
         <DataGrid Name="myGrid"/>
     </DockPanel>
