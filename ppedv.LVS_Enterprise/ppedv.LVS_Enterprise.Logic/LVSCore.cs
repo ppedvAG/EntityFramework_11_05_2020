@@ -15,7 +15,7 @@ namespace ppedv.LVS_Enterprise.Logic
         }
 
         public Lager GetLagerWithMostOfArtikel(Artikel artikel)
-        {
+        {   
             if (artikel == null)
                 throw new ArgumentNullException();
 
